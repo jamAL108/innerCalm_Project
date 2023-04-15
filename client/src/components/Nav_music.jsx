@@ -17,7 +17,7 @@ const Nav = () => {
                         <img style={{ filter: "drop-shadow(#000 2px 2px 5px)" }} src={logomusic} alt="" />
                     </NavLink>
                 </div>
-                <ul style={{ marginBottom: "0px" }} className={open ? "navbar__listms active" : "navbar__listms"}>
+                <ul style={{ marginBottom: "0px" , paddingLeft: "0"}} className={open ? "navbar__listms active" : "navbar__listms"}>
                     <li>
                         <NavLink style={{ color: "white", textShadow: "2px 2px 5px #000" }} to="/">Home</NavLink>
                     </li>

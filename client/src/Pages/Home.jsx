@@ -100,7 +100,7 @@ const Home = () => {
 
             <section className="about">
                 <div className="about_content">
-                    <h2>About Us </h2>
+                    <h2>About</h2>
                     <p>
                         Welcome to InnerCalm! We are a team of students who are committed to helping you find peace and tranquility in
                         your daily life. Our mission is to provide you with the tools
