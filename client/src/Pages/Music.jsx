@@ -143,7 +143,7 @@ const ImageSlider = ({ slides }) => {
     };
 
     return (
-        <div style={{ background: "#101316" }} className="musspage">
+        <div style={{ background: "#101316" , height : "100%", width : "100%" }} className="musspage">
             <div style={slideStylesWidthBackground} >
                 <div>
                     <audio ref={audioRef} src={musicList[currentMusicIndex]}></audio>
