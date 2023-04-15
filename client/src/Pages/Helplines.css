@@ -1,0 +1,111 @@
+.helplinespage {
+    background-color: #FEF3D8;
+    padding: 2rem;
+}
+
+.helplinespage .border {
+    border-style: dotted;
+}
+
+.helplinespage .t1 h1 {
+    padding: 10px 0px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.helplinespage .t1 {
+    background-color: #F2B5AF;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.helplinespage .t2 {
+    background-color: #939BCB;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.helplinespage .row {
+    padding: 45px;
+    margin: auto;
+}
+
+.helplinespage .col-sm {
+    border: #FEF2F4;
+    border-style: none solid;
+}
+
+@media screen and (max-width : 768px) {
+    .helplinespage .col-sm {
+        /* border: #FEF2F4; */
+        border-style: none;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        border-bottom: 2px solid wheat;
+    }
+
+    .helplinespage .row {
+        padding: 0;
+        margin: auto;
+    }
+
+    .helplinespage .t1 {
+      
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-top: 30px;
+    }
+
+    .helplinespage .t2 {
+       
+        padding-left: 2rem;
+        padding-right: 2rem;
+        margin-top: 30px;
+    }
+    
+
+}
+
+.helplinespage .btn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #FEF3D8;
+    font-size: 20px;
+    background: #939BCB;
+    padding: 5px 15px;
+    text-decoration: none;
+}
+
+.helplinespage .btn:hover {
+    background: #FEF3D8;
+    background-image: -webkit-linear-gradient(top, #FEF3D8, #fae7b9);
+    background-image: -moz-linear-gradient(top, #FEF3D8, #fae7b9);
+    background-image: -ms-linear-gradient(top, #FEF3D8, #fae7b9);
+    background-image: -o-linear-gradient(top, #FEF3D8, #fae7b9);
+    background-image: linear-gradient(to bottom, #FEF3D8, #fae7b9);
+    text-decoration: none;
+}
+
+.helplinespage .btn2 {
+    -webkit-border-radius: 6;
+    -moz-border-radius: 6;
+    border-radius: 6px;
+    font-family: Arial;
+    color: #FEF3D8;
+    font-size: 20px;
+    background: #F2B5AF;
+    padding: 10px 6px;
+    text-decoration: none;
+}
+
+.helplinespage .btn2:hover {
+    background: #FEF3D8;
+    background-image: -webkit-linear-gradient(top, #FEF3D8, #fae7b9);
+    background-image: -moz-linear-gradient(top, #FEF3D8, #fae7b9);
+    background-image: -ms-linear-gradient(top, #FEF3D8, #fae7b9);
+    background-image: -o-linear-gradient(top, #FEF3D8, #fae7b9);
+    background-image: linear-gradient(to bottom, #FEF3D8, #fae7b9);
+    text-decoration: none;
+}
