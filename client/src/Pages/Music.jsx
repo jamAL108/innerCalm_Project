@@ -78,7 +78,7 @@ const ImageSlider = ({ slides }) => {
     }, []);
 
     const [isPlaying, setIsPlaying] = useState(false);
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(4);
     const [currentMusicIndex, setCurrentMusicIndex] = useState(0);
     const audioRef = useRef(null);
 
@@ -143,7 +143,7 @@ const ImageSlider = ({ slides }) => {
     };
 
     return (
-        <div style={{ background: "#101316" , height : "100%", width : "100%" }} className="musspage">
+        <div style={{ background: "#101316", height: "100%", width: "100%" }} className="musspage">
             <div style={slideStylesWidthBackground} >
                 <div>
                     <audio ref={audioRef} src={musicList[currentMusicIndex]}></audio>
