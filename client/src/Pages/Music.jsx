@@ -73,8 +73,10 @@ const ImageSlider = ({ slides }) => {
         }
     }, []);
     let randomNumber = Math.floor(Math.random() * 52) + 1;
+    let randomNumberSlide = Math.floor(Math.random() * 8);
     const [isPlaying, setIsPlaying] = useState(false);
-    const [currentIndex, setCurrentIndex] = useState(4);
+    const [currentIndex, setCurrentIndex] = useState(randomNumberSlide);
+    
     const [currentMusicIndex, setCurrentMusicIndex] = useState(randomNumber);
     const audioRef = useRef(null);
 
