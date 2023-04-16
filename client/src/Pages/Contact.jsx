@@ -1,10 +1,15 @@
-import React,{useEffect} from "react"
-import Nav from '../components/Nav_nothome'
-import Footer from '../components/Footer'
-import './Contact.css'
-
+import React, { useState, useEffect } from "react";
+import Nav from '../components/Nav_nothome';
+import Footer from '../components/Footer';
+import './Contact.css';
 
 const Contact = () => {
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phone, setPhone] = useState("");
+    const [subject, setSubject] = useState("");
+    const [message, setMessage] = useState("");
+    const [showSuccessPopup, setShowSuccessPopup] = useState(false); // Add state for success popup
 
     useEffect(() => {
         // Update document title when component mounts
@@ -15,13 +20,50 @@ const Contact = () => {
         }
     }, []);
 
+    const handleFormSubmit = () => {
+        // Create an object with the form data
+        const formData = {
+            name: name,
+            email: email,
+            phone: phone,
+            subject: subject,
+            message: message
+        };
 
+        // Send the form data to the backend endpoint
+        fetch('https://innercallmserver.onrender.com/newcontact', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                // Reset form inputs after successful submission
+                setName("");
+                setEmail("");
+                setPhone("");
+                setSubject("");
+                setMessage("");
+                setShowSuccessPopup(true); // Set showSuccessPopup to true
+            })
+            .catch(error => console.error(error));
+    };
 
     return (
         <>
             <Nav />
             <div className="contactpage">
-
+                {showSuccessPopup && (
+                    <div className="overlay">
+                        <div className="success_popup">
+                            <p>Your form has been successfully submitted! ✅</p>
+                            <button onClick={() => setShowSuccessPopup(false)}>Close</button>
+                        </div>
+                    </div>
+                )}
                 <section className="contt">
                     <div className="wrapper">
                         <div className="title">
@@ -29,45 +71,24 @@ const Contact = () => {
                         </div>
                         <div className="contact-form">
                             <div className="input-fields">
-                                <input type="text" className="input" placeholder="Name" />
-                                <input type="text" className="input" placeholder="Email Address" />
-                                <input type="text" className="input" placeholder="Phone" />
-                                <input type="text" className="input" placeholder="Subject" />
+                                <input type="text" className="input" placeholder="Name" value={name} onChange={(e) => setName(e.target.value)} />
+                                <input type="text" className="input" placeholder="Email Address" value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <input type="text" className="input" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} />
+                                <input type="text" className="input" placeholder="Subject" value={subject} onChange={(e) => setSubject(e.target.value)} />
                             </div>
                             <div className="msg">
-                                <textarea placeholder="Message"></textarea>
-                                <div className="btnsend">send</div>
+                                <textarea placeholder="Message" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+                                <div className="btnsend" onClick={handleFormSubmit}>send</div>
                             </div>
                         </div>
                     </div>
                 </section>
-                {/* <section id="social">
-                    <h1 className="h-primary">FOLLOW US</h1>
-                    <div id="socialmedia">
-                        <div className="social-item">
-                            <a href="https://www.instagram.com"><img src="image/instagram-svgrepo-com.svg" alt="" /></a>
-                        </div>
-                        <div className="social-item">
-                            <img src="image/facebook-svgrepo-com.svg" alt="" />
-                        </div>
-                        <div className="social-item">
-                            <img src="image/linkedin-svgrepo-com.svg" alt="" />
-                        </div>
-                        <div className="social-item">
-                            <img src="image/twitter-svgrepo-com.svg" alt="" />
-                        </div>
-                        <div className="social-item">
-                            <img src="image/youtube-svgrepo-com.svg" alt="" />
-                        </div>
-                        <div className="social-item">
-                            <img src="image/path-svgrepo-com.svg" alt="" />
-                        </div>
-                    </div>
-                </section> */}
             </div>
             <Footer />
+            {/* Conditionally render success popup */}
+
         </>
     )
 }
 
-export default Contact
+export default Contact;

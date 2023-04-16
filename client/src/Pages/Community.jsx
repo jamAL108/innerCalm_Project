@@ -32,7 +32,7 @@ const Community = () => {
         }
 
         e.preventDefault();
-        fetch('http://localhost:5000/newpost', {
+        fetch('https://innercallmserver.onrender.com/newpost', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, story }),
@@ -66,10 +66,10 @@ const Community = () => {
     };
 
 
-    const NOSERVERSTYLE = {
-        fontFamily: "'Poppins',sans-serif",
-        color: "white"
-    }
+    // const NOSERVERSTYLE = {
+    //     fontFamily: "'Poppins',sans-serif",
+    //     color: "white"
+    // }
 
     const handleCloseForm = () => {
         setName("")
@@ -87,7 +87,7 @@ const Community = () => {
 
     const FetchPosts = async () => {
         try {
-            const resFromBack = await fetch('http://localhost:5000/allposts', {
+            const resFromBack = await fetch('https://innercallmserver.onrender.com/allposts', {
                 method: "GET",
                 headers: {
                     Accept: "application/json",
@@ -190,7 +190,7 @@ const Community = () => {
                         })}
                         {/* ////////////////// */}
 
-                        {sharesection !== {} ? <><h2 style={NOSERVERSTYLE}>Sharing your feature will be available soon</h2></> : <></>}
+                        {/* {sharesection !== {} ? <><h2 style={sharesection}>Sharing your feature will be available soon</h2></> : <></>} */}
                     </div>
 
 
