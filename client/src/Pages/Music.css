@@ -23,8 +23,8 @@
     align-items: center;
 }
 
-.pageturnbtn{
-    text-shadow: rgb(0, 0, 0) 2px 2px 5px ;
+.pageturnbtn {
+    text-shadow: rgb(0, 0, 0) 2px 2px 5px;
 }
 
 @media screen and (max-width :768px) {

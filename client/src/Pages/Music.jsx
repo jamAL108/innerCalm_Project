@@ -22,14 +22,14 @@ import music3 from "../components/music/music3.mp3";
 import music4 from "../components/music/music4.mp3";
 import music5 from "../components/music/music5.mp3";
 
-let pic1 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/innercalm/src/components/Image-1.jpg'
-let pic2 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/innercalm/src/components/Image-2.jpg'
-let pic3 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/innercalm/src/components/Image-3.jpg'
-let pic4 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/innercalm/src/components/Image-4.jpg'
-let pic5 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/innercalm/src/components/Image-5.jpg'
-let pic6 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/innercalm/src/components/Image-6.gif'
-let pic7 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/innercalm/src/components/Image-7.gif'
-let pic8 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/innercalm/src/components/Image-8.gif'
+let pic1 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/client/src/components/Image-1.jpg'
+let pic2 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/client/src/components/Image-2.jpg'
+let pic3 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/client/src/components/Image-3.jpg'
+let pic4 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/client/src/components/Image-4.jpg'
+let pic5 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/client/src/components/Image-5.jpg'
+let pic6 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/client/src/components/Image-6.gif'
+let pic7 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/client/src/components/Image-7.gif'
+let pic8 = 'https://raw.githubusercontent.com/BlazeRahim/InnerCalm/main/client/src/components/Image-8.gif'
 const musicList = [music1, music2, music3, music4, music5];
 
 
@@ -78,7 +78,7 @@ const ImageSlider = ({ slides }) => {
     }, []);
 
     const [isPlaying, setIsPlaying] = useState(false);
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(4);
     const [currentMusicIndex, setCurrentMusicIndex] = useState(0);
     const audioRef = useRef(null);
 
