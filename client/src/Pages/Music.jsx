@@ -72,10 +72,10 @@ const ImageSlider = ({ slides }) => {
             document.title = 'InnerCalm';
         }
     }, []);
-
+    let randomNumber = Math.floor(Math.random() * 52) + 1;
     const [isPlaying, setIsPlaying] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(4);
-    const [currentMusicIndex, setCurrentMusicIndex] = useState(4);
+    const [currentMusicIndex, setCurrentMusicIndex] = useState(randomNumber);
     const audioRef = useRef(null);
 
     const goToPrevious = () => {
