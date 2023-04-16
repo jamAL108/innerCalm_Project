@@ -2,8 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose")
 const app = express();
 const bodyParser = require('body-parser')
-let port = 5000 || process.env.PORT; 
-const db = "mongodb+srv://innercalm:innercalm@innercalm.hyeb5s1.mongodb.net/innercalm";
+let port = 5000 || process.env.PORT;
+const db = process.env.DB;
 // const router = express.Router();
 const cors = require('cors')
 
@@ -47,6 +47,45 @@ app.get('/allposts', async (req, res) => {
     let posts = await post.find({})
     res.status(200).json(posts);
 })
+
+
+
+
+
+
+const contactSchema = mongoose.Schema(
+    {
+        name: { type: String },
+        email: { type: String },
+        phone: { type: String },
+        subject: { type: String },
+        message: { type: String },
+    }
+)
+
+const contact = mongoose.model("contact", contactSchema);
+
+app.post('/newcontact', (req, res) => {
+
+    const { name, email, phone, subject, message } = req.body;
+
+    const newcontact = new contact({
+        name, email, phone, subject, message
+    })
+
+    newcontact.save().then(() => {
+        console.log("Post saved")
+        res.status(200).json({ message: "Contacted successfully" })
+    }).catch((err) => {
+        console.log(err)
+        res.status(400).json({ error: "Not contacted" })
+    })
+})
+
+
+
+
+
 
 //SERVER STARTED
 app.listen(port, () => {
