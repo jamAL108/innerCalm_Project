@@ -1,5 +1,6 @@
 import React, { useEffect } from "react"
 import Nav from '../components/Nav_nothome'
+import Footer from '../components/Footer'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './Helplines.css'
 
@@ -173,6 +174,7 @@ const Helplines = () => {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }

@@ -1,19 +1,21 @@
-.allbuttonsmspg {
-    position: absolute;
-    top: 20%;
-    right: 10%;
+@media screen and (min-width:768px) {
+    .allbuttonsmspg {
+        position: absolute;
+        top: 20%;
+        right: 10%;
 
-    display: flex;
-    min-width: 200px;
-    max-width: 300px;
-    justify-content: space-evenly;
-    align-items: center;
+        display: flex;
+        min-width: 200px;
+        max-width: 300px;
+        justify-content: space-evenly;
+        align-items: center;
 
-    border-radius: 50px;
-    backdrop-filter: blur(10px) brightness(70%);
-    border: 1px solid white;
-    padding: 10px 20px;
-    box-shadow: 0px 0px 30px #000;
+        border-radius: 50px;
+        backdrop-filter: blur(10px) brightness(70%);
+        border: 1px solid white;
+        padding: 10px 20px;
+        box-shadow: 0px 0px 30px #000;
+    }
 }
 
 .allbuttonsmspg button {
@@ -21,13 +23,17 @@
     align-items: center;
 }
 
+.pageturnbtn{
+    text-shadow: rgb(0, 0, 0) 2px 2px 5px ;
+}
+
 @media screen and (max-width :768px) {
 
     .allbuttonsmspg {
         position: absolute;
-        top: 20%;
-        right: 5%;
-
+        bottom: 10%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         display: flex;
         min-width: 200px;
         max-width: 300px;

@@ -147,10 +147,10 @@ const ImageSlider = ({ slides }) => {
             <div style={slideStylesWidthBackground} >
                 <div>
                     <audio ref={audioRef} src={musicList[currentMusicIndex]}></audio>
-                    <div onClick={goToPrevious} style={leftArrowStyles}>
+                    <div onClick={goToPrevious} style={leftArrowStyles} className="pageturnbtn"> 
                         ❰
                     </div>
-                    <div onClick={goToNext} style={rightArrowStyles}>
+                    <div onClick={goToNext} style={rightArrowStyles} className="pageturnbtn">
                         ❱
                     </div>
 
