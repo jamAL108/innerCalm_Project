@@ -65,27 +65,28 @@ const Home = () => {
                 </div>
             </section>
 
-
-            {/* 
             <section className="listen_music">
                 <div className="listen_music_content">
                     <h2>
-                        MUSIC HEALS ..
+                        MUSIC HEALS 
                     </h2>
                     <p>
                         Music has the power to heal and soothe our souls. Listening to our peaceful music and sounds can bring relaxation, tranquility, and a sense of inner peace. It can help reduce stress, anxiety, and promote overall well-being. Our carefully curated collection of music is designed to elevate your mood, calm your mind, and rejuvenate your spirit.
                     </p>
+                    <div className="listen_music_right">
+                        <Link to="/music">
+                            <button className="listen_button">
+                                <span className="link">
+                                    🎧 Listen Now
+                                </span>
+                            </button>
+                        </Link>
+                    </div>
 
                 </div>
 
-                <div className="listen_music_right">
-                <button className="listen_button">
-                    <span className="link">
-                        <Link to="/music">Listen Now</Link>
-                    </span>
-                </button>
-                </div>
-            </section> */}
+            </section>
+
 
             <section className="mtimgs">
                 <div className="mt_content">
@@ -102,13 +103,12 @@ const Home = () => {
                 <div className="about_content">
                     <h2>About</h2>
                     <p>
-                        Welcome to InnerCalm! We are a team of students who are committed to helping you find peace and tranquility in
-                        your daily life. Our mission is to provide you with the tools
-                        and resources you need to achieve a simple - mental, emotional, and physical
-                        well-being.
+                    InnerCalm is a project focused on providing tools and resources for individuals to achieve mental and emotional well-being. Our mission is to empower individuals with simple and accessible strategies for managing stress and cultivating inner peace. Through stories, music and other resources, our team of students is committed to helping individuals find tranquility in their daily lives.
                     </p>
                 </div>
             </section>
+
+
 
             <Footer />
         </>
