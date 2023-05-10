@@ -31,7 +31,7 @@ const Contact = () => {
         };
 
         // Send the form data to the backend endpoint
-        fetch('https://innercallmserver.onrender.com/newcontact', {
+        fetch('http://34.131.132.151:5000/newcontact', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
