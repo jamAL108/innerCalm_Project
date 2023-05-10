@@ -32,7 +32,7 @@ const Community = () => {
         }
 
         e.preventDefault();
-        fetch('http://34.131.132.151:5000/newpost', {
+        fetch('https://innercallmserver.onrender.com/newpost', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, story }),
@@ -87,7 +87,7 @@ const Community = () => {
 
     const FetchPosts = async () => {
         try {
-            const resFromBack = await fetch('http://34.131.132.151:5000/allposts', {
+            const resFromBack = await fetch('https://innercallmserver.onrender.com/allposts', {
                 method: "GET",
                 headers: {
                     Accept: "application/json",
