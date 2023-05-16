@@ -16,6 +16,34 @@ const Home = () => {
     }, []);
 
 
+    const FetchPosts = async () => {
+        try {
+            const resFromBack = await fetch('https://innercallmserver.onrender.com/allposts', {
+                method: "GET",
+                headers: {
+                    Accept: "application/json",
+                    "Content-Type": "application/json"
+                }
+            })
+
+            const data = await resFromBack.json()
+            console.log(data)
+
+
+            if (resFromBack.status !== 200 || !data) {
+                window.alert("Error")
+            }
+
+        }
+        catch (err) {
+            console.log(err)
+        }
+    }
+
+    useEffect(() => {
+        FetchPosts()
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
     let img1, img2, img3;
 
     // Generate img1
