@@ -25,25 +25,25 @@ const Community = () => {
     };
 
     const handleSubmit = (e) => {
-
+        handleCloseForm();
+        let x = JSON.stringify({ name, story });
         if (!story) {
             setSubErr(true)
             return;
         }
-
+        
         e.preventDefault();
         fetch('https://innercallmserver.onrender.com/newpost', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name, story }),
+            body: x,
         })
             .then((response) => {
                 response.json()
-                console.log(response)
+                // console.log(response)
                 if (response.status === 200) {
                     setName("")
                     setStory("")
-                    handleCloseForm();
                     FetchPosts()
 
                 } else {
@@ -97,7 +97,7 @@ const Community = () => {
 
             const data = await resFromBack.json()
             setAllPosts(data)
-            console.log(data)
+            // console.log(data)
 
 
             if (resFromBack.status !== 200 || !data) {
