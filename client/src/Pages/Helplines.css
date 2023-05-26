@@ -100,33 +100,43 @@
     width: 10rem;
 }
 
-.helplinespage .row .col-sm .website .btn {
-    background-color:white;
-    border: none;
-    color: black;
+
+.btn {
+    display: inline-block;
     width: 30%;
     height: 1.6%;
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 1rem; 
-    margin: 3px 1px; 
-    cursor: pointer;
-    border-radius: 20px; 
-    transition: 0.5s ease;
-    box-shadow: 2px 4px 6px -1px rgba(0,0,0,0.75);
-}
-.helplinespage .row .col-sm .website .btn:hover{
-    transition: 0.5s ease;
-    background-color:#FEF2F4;
+    font-size: 0.8rem;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    background-color: #ffffff;
+    color: black;
     border: none;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 2px 4px 6px -1px rgba(0,0,0,0.4);
+    border-radius: 6px;
     cursor: pointer;
-}
-.helplinespage .row .col-sm .website .btn:hover{
+    transition: all 0.8s;
+  }
+  
+  .btn:hover {
+    background-color:#FEF2F4;
+    color: black;
+    text-decoration: none;
+    box-shadow: 2px 4px 6px -1px rgba(0, 0, 0, 0.6);
     transform: scale(0.9);
     -webkit-transform:scale(0.9) ;
     -ms-transform: scale(0.9);
-}
+  }
+  
+  @media (max-width: 600px) {
+    .btn {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
 
 @media screen and (min-width : 940px) {
     /* animation */
@@ -225,6 +235,11 @@
     }
     .helplinespage .col-sm.show{
         transform: translateX(0);
+    }
+    
+        .btn {
+        width: 30%;
+        height: 0.8%;
     }
     
 }
